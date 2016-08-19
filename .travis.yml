@@ -1,0 +1,26 @@
+language: ruby
+sudo: required
+services: docker
+script: travis_retry bundle exec rspec
+env:
+  global:
+  - JENKINSVERSION=2.7.2
+  - GH_USER=thefynx
+  - secure: VU68ggkeNST98OJ25NVubt0uXM9ZfEOs1ZSUXEWjgFO35JTKkKEJAMPlPaA+yl6B4TDDjMbNhK8HGYsyFXyMXHMaZsp2+nHPjuLdf89mmXnyoARVBIyiV/3oWsAOt0BjZ/POBjRn+eHAvocNrfgQfhkWgNh6LAGV7kAACKwxXWE+1t+CTAfjB32ePEvhvbFEhRGaH3JSd+fN5EOT73ekg+LE/gHFe6ZQvNsKhsDKsn6pZ0ItgvY5uHNF8H3In867j0Gr3MeeDHCEBQThxTWSByp7PdASSy5CJMuitRPEcGQcTDzeVZkI/AzARYwSvpoJ1nkRoQP/c2XhbI9+RA1ClGEmSnE2Y65GP66gXfEZege0WPwF275qnmWDQpKwv+hOPSbAW5xwhFtWmvS0nFUtJoTgDtewHqoeYmz9YJ/TEEOX+xpjfyUyfgWElZoeuElvEcWiXF3zkF4I1uYf9xkqkUcYPr1OcltnVLxtxWr7JpKbKrzmDoa27NSK0Sq+P/eppY45dZaL6wK6nU9ipYeWAO2EAyKPK77Qb5gmYKkw8nWswcJLP6L9Kd0//IRJ7s/COCp/xZlS2U91MnIBKSw+o4whsK+Snws9MW34TNnVztopiW2wGQi/Y10gBE6nqjWm1DxEQu1h6AG0HqigTSu9vyJncBi2DHSdAC1fy2hPgY4=
+before_deploy:
+- git config --global user.email "builds@travis-ci.com"
+- git config --global user.name "Travis CI"
+- export GIT_TAG=$JENKINSVERSION.b$TRAVIS_BUILD_NUMBER
+- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+- git push -q https://$GH_USER:$GH_TOKEN@github.com/hearstat/docker-jenkins
+  --tags
+- ls -R
+deploy:
+  provider: releases
+  file: Dockerfile
+  skip_cleanup: true
+  on:
+    repo: hearstat/docker-jenkins
+    tags: false
+  api_key:
+    secure: kvAsdL2ufqZmIVgtKRCP1m7hSokIk4AE/lUIyAYP4sJYnnTC9Gb6POjG1mHU7icOhVvyhtnkKnrQIZoyb1TLo4DX0we1uswW/vREskI/lljgWbsCc34ihrp3UZU256vD4MsTn6apVfuIdi6Mp0jXOmJ5O1LkZiEil7ynaCYQsPoDu659ncmWeP0nz6asfJYAK+2lqr3DNxA9rxM0JzhTJMLjysKn8ScwdFSjbpIR5cSURYdAERW/bT4/AvGK2jvEMMwKGseKYeWSaNEFmWATKoLGNCtnpcnf6zd80kATT7tvNG0xqVbhpv2VV1E8XQVz4JcgGlV6+YeOHVr3sEwiGEn444HRB+SfSuGDn4jtt6waE4JVSY0goRDQmW7VxgKrq8IOGOvAfQyeZatsAWZJdluOEVajlxvxp1zDNRyxbw62d+w+QSRYum6Z9ZMVlj07PYYpxSTWtK9Arkr7ScfU9gheJlv9iCArF20H0HyBhW4MAVlPoOzhKD4LfWGuGJdljtHmyYSM/AhhNi0/RMmq0a0E7qDE+BvOBcT7UU3xDCSIP5kBibYTvrJml4Vg0mRKK5/jMWmYwfIZh2X5JzDt4p7xAg9ePRvkvNtihnAJywDPSUwpeae8zflmAIAmfis6KN3rmsbAiyAsc0Ev+YWRct4YHkk+KIeDUF0/faZG3ms=
