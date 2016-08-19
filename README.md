@@ -1,6 +1,6 @@
 # Dockerized Jenkins - Custom
 
-[![Build Status](https://travis-ci.org/HearstAT/docker-jenkins.svg?branch=master)](https://travis-ci.org/HearstAT/docker-jenkins) [![GitHub release](https://img.shields.io/github/release/TheFynx/docker-jenkins-job-builder.svg?maxAge=2592000)](https://github.com/TheFynx/docker-jenkins-job-builder/releases) [![Docker Automated buil](https://img.shields.io/docker/automated/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/) [![Docker Stars](https://img.shields.io/docker/stars/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/) [![Docker Pulls](https://img.shields.io/docker/pulls/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/)
+[![Build Status](https://travis-ci.org/HearstAT/docker-jenkins.svg?branch=master)](https://travis-ci.org/HearstAT/docker-jenkins) [![GitHub release](https://img.shields.io/github/release/hearstat/docker-jenkins.svg?maxAge=2592000)](https://github.com/hearstat/docker-jenkins/releases) [![Docker Automated build](https://img.shields.io/docker/automated/hearstat/jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/jenkins/) [![Docker Stars](https://img.shields.io/docker/stars/hearstat/jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/jenkins/) [![Docker Pulls](https://img.shields.io/docker/pulls/hearstat/jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/jenkins/)
 
 
 The Jenkins Continuous Integration and Delivery server.
