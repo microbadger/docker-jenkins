@@ -20,7 +20,7 @@ deploy:
   file: Dockerfile
   skip_cleanup: true
   on:
-    repo: hearstat/docker-jenkins
+    repo: HearstAT/docker-jenkins
     tags: false
   api_key:
     secure: kvAsdL2ufqZmIVgtKRCP1m7hSokIk4AE/lUIyAYP4sJYnnTC9Gb6POjG1mHU7icOhVvyhtnkKnrQIZoyb1TLo4DX0we1uswW/vREskI/lljgWbsCc34ihrp3UZU256vD4MsTn6apVfuIdi6Mp0jXOmJ5O1LkZiEil7ynaCYQsPoDu659ncmWeP0nz6asfJYAK+2lqr3DNxA9rxM0JzhTJMLjysKn8ScwdFSjbpIR5cSURYdAERW/bT4/AvGK2jvEMMwKGseKYeWSaNEFmWATKoLGNCtnpcnf6zd80kATT7tvNG0xqVbhpv2VV1E8XQVz4JcgGlV6+YeOHVr3sEwiGEn444HRB+SfSuGDn4jtt6waE4JVSY0goRDQmW7VxgKrq8IOGOvAfQyeZatsAWZJdluOEVajlxvxp1zDNRyxbw62d+w+QSRYum6Z9ZMVlj07PYYpxSTWtK9Arkr7ScfU9gheJlv9iCArF20H0HyBhW4MAVlPoOzhKD4LfWGuGJdljtHmyYSM/AhhNi0/RMmq0a0E7qDE+BvOBcT7UU3xDCSIP5kBibYTvrJml4Vg0mRKK5/jMWmYwfIZh2X5JzDt4p7xAg9ePRvkvNtihnAJywDPSUwpeae8zflmAIAmfis6KN3rmsbAiyAsc0Ev+YWRct4YHkk+KIeDUF0/faZG3ms=
