@@ -1,5 +1,8 @@
 # Dockerized Jenkins - Custom
 
+[![Build Status](https://travis-ci.org/HearstAT/docker-jenkins.svg?branch=master)](https://travis-ci.org/HearstAT/docker-jenkins) [![GitHub release](https://img.shields.io/github/release/TheFynx/docker-jenkins-job-builder.svg?maxAge=2592000)](https://github.com/TheFynx/docker-jenkins-job-builder/releases) [![Docker Automated buil](https://img.shields.io/docker/automated/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/) [![Docker Stars](https://img.shields.io/docker/stars/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/) [![Docker Pulls](https://img.shields.io/docker/pulls/hearstat/docker-jenkins.svg?maxAge=2592000)](https://hub.docker.com/r/hearstat/docker-jenkins/)
+
+
 The Jenkins Continuous Integration and Delivery server.
 
 This is a fully functional Jenkins server, based on the Long Term Support release.
